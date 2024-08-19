@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Boot Frontend</title>
+    <script>
+        async function fetchGreeting() {
+            const response = await fetch('/api/greeting');
+            const greeting = await response.text();
+            document.getElementById('greeting').innerText = greeting;
+        }
+        window.onload = fetchGreeting;
+    </script>
+</head>
+<body>
+    <h1>Greeting from Spring Boot</h1>
+    <p id="greeting"></p>
+</body>
+</html>
